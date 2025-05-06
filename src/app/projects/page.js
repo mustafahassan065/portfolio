@@ -34,7 +34,7 @@ export default function ProjectsPage() {
 
 " className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/eccomerce.jpg"
                   alt="E-Commerce Platform"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
           >
             <a href="https://www.linkedin.com/posts/mustafa-hassan-11022530a_introducing-wellness-wise-a-comprehensive-activity-7230569282114338817-cvI4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6y_FwBb42hkuXM3J_S3pz_I-EPoxNJJCs" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/wellness.jpg"
                   alt="Social Media Dashboard"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -102,7 +102,7 @@ export default function ProjectsPage() {
           >
             <a href="#" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/CRM.webp"
                   alt="AI Content Generator"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -135,7 +135,7 @@ export default function ProjectsPage() {
           >
             <a href="#" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/video.jpeg"
                   alt="E-Commerce Platform"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
           >
             <a href="#" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/law.webp"
                   alt="Social Media Dashboard"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -206,7 +206,7 @@ export default function ProjectsPage() {
           >
             <a href="#" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/portfolio.png"
                   alt="AI Content Generator"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"

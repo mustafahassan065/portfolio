@@ -40,7 +40,7 @@ export default function AboutPage() {
                 className="flex-shrink-0"
               >
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-cyan-300/30 relative">
-                  <img
+                  <Image
                     src="/mustafa.png"
                     alt="Mustafa Hassan"
                     className="w-full h-full object-cover"

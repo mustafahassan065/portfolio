@@ -155,7 +155,7 @@ export default function Home() {
         >
           <div className="w-64 h-64 mr-10 md:w-100 md:h-100 rounded-full overflow-hidden border-4 border-indigo-900/50 shadow-2xl shadow-indigo-900/30 relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-indigo-900/50 opacity-50"></div>
-            <img
+            <Image
               src="/mustafa.png"
               alt="Mustafa Hassan"
               className="w-full h-full object-cover relative z-10"
@@ -191,7 +191,7 @@ export default function Home() {
           >
             <a href="https://www.linkedin.com/posts/mustafa-hassan-11022530a_hi-i-have-created-an-eccomerce-website-activity-7208918976549048320-QY2n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6y_FwBb42hkuXM3J_S3pz_I-EPoxNJJCs" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/eccomerce.jpg"
                   alt="E-Commerce Platform"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -225,7 +225,7 @@ export default function Home() {
           >
             <a href="https://www.linkedin.com/posts/mustafa-hassan-11022530a_introducing-wellness-wise-a-comprehensive-activity-7230569282114338817-cvI4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6y_FwBb42hkuXM3J_S3pz_I-EPoxNJJCs" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/wellness.jpg"
                   alt="Wellness Wise Website"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
@@ -259,7 +259,7 @@ export default function Home() {
           >
             <a href="#" className="block">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/CRM.webp"
                   alt="Customer Relationship Management"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
