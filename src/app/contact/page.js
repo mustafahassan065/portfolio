@@ -25,7 +25,7 @@ export default function ContactPage() {
             </h1>
             <div className="w-20 sm:w-24 h-1 bg-cyan-300 mx-auto mb-6 sm:mb-8"></div>
             <p className="text-gray-300 max-w-md sm:max-w-xl mx-auto text-sm sm:text-base">
-              Let's connect! Here's how you can reach me.
+              Let&apos;s connect! Here is how you can reach me.
             </p>
           </motion.div>
 
