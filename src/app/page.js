@@ -131,7 +131,7 @@ export default function Home() {
           className="w-full md:w-1/2 text-center md:text-left space-y-6"
         >
           <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Hi, I'm <span className="bg-cyan-300 bg-clip-text text-transparent">Mustafa Hassan</span>
+            Hi, I&apos;m <span className="bg-cyan-300 bg-clip-text text-transparent">Mustafa Hassan</span>
           </h2>
           <p className="text-lg md:text-xl text-white-300 max-w-lg">
             Full Stack Web Developer with <span className="text-cyan-300 font-bold">5+ years</span> of experience crafting modern web apps using the latest technologies
