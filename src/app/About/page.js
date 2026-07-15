@@ -63,10 +63,17 @@ export default function AboutPage() {
                 
                 <div className="space-y-4 text-white-300">
                   <p>
-                    With <span className="text-cyan-300 font-bold">5+ years</span> of professional experience in web development, 
-                    I specialize in creating modern, responsive, and high-performance applications.
+                    With <span className="text-cyan-300 font-bold">2+ years</span> of freelance experience delivering
+                    production-grade web applications, I specialize in building modern, responsive, and high-performance
+                    full stack apps — from architecture and database design to VPS deployment and payment integration.
                   </p>
-                  
+
+                  <p>
+                    I've shipped end-to-end platforms for clients across the <span className="text-cyan-300">UK, Qatar, Europe, and the US</span> —
+                    covering booking systems, multi-role admin portals, AI-powered voice analysis tools, and AI voice-calling
+                    agents — via Fiverr and direct client engagements.
+                  </p>
+
                   <p>
                     Currently pursuing <span className="text-cyan-300">Software Engineering</span> at Government College University Faisalabad, 
                     combining academic knowledge with practical industry experience.
@@ -79,9 +86,10 @@ export default function AboutPage() {
                     <h3 className="text-xl font-semibold mb-3 text-cyan-100">Technical Expertise</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        'HTML5', 'CSS3', 'JavaScript', 'TypeScript',
-                        'React', 'Next.js', 'Node.js', 'Express',
-                        'Python', 'Django', 'Flask', 'PHP', 'Laravel', 'TailwindCSS'
+                        'HTML5', 'CSS3', 'JavaScript', 'React', 'Next.js',
+                        'Node.js', 'Express', 'Python', 'Django', 'Flask',
+                        'FastAPI', 'PHP', 'TailwindCSS', 'MySQL', 'PostgreSQL',
+                        'MongoDB', 'AI-Agentic Development'
                       ].map((tech, index) => (
                         <motion.span
                           key={tech}
@@ -113,24 +121,24 @@ export default function AboutPage() {
                 
                 {[
                   {
-                    year: "2020",
-                    title: "Started Web Development",
-                    description: "Began learning HTML, CSS and JavaScript fundamentals"
-                  },
-                  {
                     year: "2022",
-                    title: "Professional Projects",
-                    description: "Started freelancing and working on client projects"
+                    title: "Started Software Engineering",
+                    description: "Began BS Software Engineering at Government College University, Faisalabad"
                   },
                   {
                     year: "2023",
-                    title: "Full Stack Specialization",
-                    description: "Expanded into backend development with Node.js and Python"
+                    title: "Web Development Internship",
+                    description: "Remote internship at InterCraft, Karachi — Django, Flask, MySQL, MongoDB, Docker"
                   },
                   {
                     year: "2024",
-                    title: "Software Engineering Degree",
-                    description: "Pursuing formal education while maintaining professional work"
+                    title: "Started Freelancing",
+                    description: "Began delivering full stack client projects via Fiverr and direct engagements"
+                  },
+                  {
+                    year: "2025-26",
+                    title: "AI-Agentic & Full Stack Specialization",
+                    description: "Shipped 10+ production platforms across React/Next.js, Node.js, Python, and AI-agentic web apps for clients in the UK, Qatar, Europe, and the US"
                   }
                 ].map((item, index) => (
                   <motion.div
@@ -141,7 +149,7 @@ export default function AboutPage() {
                     className="relative pl-16 pb-8"
                   >
                     <div className="absolute left-0 w-12 h-12 rounded-full bg-cyan-300/10 border-2 border-cyan-300 flex items-center justify-center">
-                      <span className="text-cyan-300 font-bold">{item.year}</span>
+                      <span className="text-cyan-300 font-bold text-xs">{item.year}</span>
                     </div>
                     <h4 className="text-xl font-semibold mb-1">{item.title}</h4>
                     <p className="text-gray-400">{item.description}</p>
