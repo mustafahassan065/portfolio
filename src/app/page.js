@@ -6,6 +6,30 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
+const featuredProjects = [
+  {
+    title: "Prime EPC and Design Consultants",
+    description: "UK EPC booking platform with dynamic scheduling and a full admin panel.",
+    image: "https://source.unsplash.com/800x600/?modern-house,architecture",
+    url: "https://www.primeepcdesign.co.uk/",
+    tech: ["NEXT.JS", "NODE.JS", "POSTGRESQL"],
+  },
+  {
+    title: "Aethla Care",
+    description: "Qatar home healthcare platform with Admin, Employee & Patient portals.",
+    image: "https://source.unsplash.com/800x600/?healthcare,nurse",
+    url: "https://www.aethlacare.com/",
+    tech: ["REACT", "NODE.JS", "MONGODB"],
+  },
+  {
+    title: "VoiceControl AI",
+    description: "AI voice-analysis platform that scores speech and builds a daily training plan.",
+    image: "https://source.unsplash.com/800x600/?microphone,recording-studio",
+    url: "https://www.voicecontrol.tech/",
+    tech: ["NEXT.JS", "FASTAPI", "AI AGENTIC"],
+  },
+];
+
 export default function Home() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -134,7 +158,7 @@ export default function Home() {
             Hi, I am <span className="bg-cyan-300 bg-clip-text text-transparent">Mustafa Hassan</span>
           </h2>
           <p className="text-lg md:text-xl text-white-300 max-w-lg">
-            Full Stack Web Developer with <span className="text-cyan-300 font-bold">5+ years</span> of experience crafting modern web apps using the latest technologies
+            Full Stack Web Developer with <span className="text-cyan-300 font-bold">2+ years</span> of freelance experience building production-grade web apps — from React/Next.js frontends to Node.js/Python backends, deployed end-to-end for clients across the UK, Qatar, Europe, and the US.
           </p>
           <div className="pt-2">
             <button
@@ -176,112 +200,48 @@ export default function Home() {
             My <span className="bg-cyan-300 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-lg text-white-300 max-w-2xl mx-auto">
-            Here are some of my recent works. Each project was carefully crafted to solve unique challenges.
+            A few of my recent live, deployed client projects.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Project 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ y: -10 }}
-            className="relative group overflow-hidden rounded-xl shadow-2xl"
-          >
-            <a href="https://www.linkedin.com/posts/mustafa-hassan-11022530a_hi-i-have-created-an-eccomerce-website-activity-7208918976549048320-QY2n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6y_FwBb42hkuXM3J_S3pz_I-EPoxNJJCs" className="block">
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src="/eccomerce.jpg"
-                  alt="E-Commerce Platform"
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">E-Commerce Platform</h3>
-                    <p className="text-gray-300 mb-3">Full-featured online store with payment integration</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">PYTHON</span>
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">FLASK</span>
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">SQL</span>
-                    </div>
+          {featuredProjects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              whileHover={{ y: -10 }}
+              className="group overflow-hidden rounded-xl shadow-2xl bg-gray-800/60 border border-gray-700 flex flex-col"
+            >
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block flex flex-col h-full"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4 flex-1">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((t) => (
+                      <span key={t} className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-               
-              </div>
-            </a>
-          </motion.div>
-
-          {/* Project 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ y: -10 }}
-            className="relative group overflow-hidden rounded-xl shadow-2xl"
-          >
-            <a href="https://www.linkedin.com/posts/mustafa-hassan-11022530a_introducing-wellness-wise-a-comprehensive-activity-7230569282114338817-cvI4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6y_FwBb42hkuXM3J_S3pz_I-EPoxNJJCs" className="block">
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src="/wellness.jpg"
-                  alt="Wellness Wise Website"
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Wellness Wise Website</h3>
-                    <p className="text-gray-300 mb-3">A Wellness Platform offering expert advice, health tips and a secure dashboard</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">DJANGO</span>
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">PYTHON</span>
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">JAVASCRIPT</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-             
-              </div>
-            </a>
-          </motion.div>
-
-          {/* Project 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            whileHover={{ y: -10 }}
-            className="relative group overflow-hidden rounded-xl shadow-2xl"
-          >
-            <a href="#" className="block">
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src="/CRM.webp"
-                  alt="Customer Relationship Management"
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Customer Relationship Management</h3>
-                    <p className="text-gray-300 mb-3">A centralized CRM platform streamlining customer interactions</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">NODE JS</span>
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">EXPRESS</span>
-                      <span className="px-3 py-1 bg-cyan-300/20 text-cyan-300 text-xs rounded-full">MONGODB</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-              
-              </div>
-            </a>
-          </motion.div>
+              </a>
+            </motion.div>
+          ))}
         </div>
 
         {/* View More Button */}
