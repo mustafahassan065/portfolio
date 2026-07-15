@@ -69,7 +69,7 @@ export default function AboutPage() {
                   </p>
 
                   <p>
-                    I've shipped end-to-end platforms for clients across the <span className="text-cyan-300">UK, Qatar, Europe, and the US</span> —
+                    I&apos;ve shipped end-to-end platforms for clients across the <span className="text-cyan-300">UK, Qatar, Europe, and the US</span> —
                     covering booking systems, multi-role admin portals, AI-powered voice analysis tools, and AI voice-calling
                     agents — via Fiverr and direct client engagements.
                   </p>
