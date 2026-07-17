@@ -182,7 +182,9 @@ export default function Home() {
             <Image
               src="/mustafa.png"
               alt="Mustafa Hassan"
-              className="w-full h-full object-cover relative z-10"
+              fill
+              sizes="(max-width: 768px) 256px, 400px"
+              className="object-cover relative z-10"
             />
           </div>
         </motion.div>
