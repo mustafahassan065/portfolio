@@ -45,7 +45,9 @@ export default function AboutPage() {
                   <Image
                     src="/mustafa.png"
                     alt="Mustafa Hassan"
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 192px, 256px"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/10 to-indigo-500/10"></div>
                 </div>
